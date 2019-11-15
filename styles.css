@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: inline-block;
+  border-radius: 3px;
+  transition: background-color 200ms ease;
+}
+.button:hover {
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.ghost-button {
+  background: transparent;
+  border: 3px solid #333;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: background-color 200ms ease, color 200ms ease;
+  padding: 1rem;
+}
+.ghost-button:hover {
+  background: #333;
+  color: white;
+}
+
+nav {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #5d4954;
+}
+.logo {
+    color:rgb(226,226,226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    text-decoration: none;
+    color:rgb(226,226,226);
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+.burger{
+    display:none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height:3px;
+    background-color:rgb(226,226,226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* чтобы на больших экранах расстяние между li было по-больше */
+ @media screen and (max-width:1024px){
+    body {
+        overflow: hidden;
+    }
+
+}
+.nav-links{
+        width:60%;
+    }
+@media screen and (max-width:800px){
+    body {
+        overflow: hidden;
+    }
+    .nav-links{
+        /* переместятся враво */
+        position: absolute;
+        right:0px;
+        /* full-screen */
+        height:92vh;
+        /* top 8vh перенесёт все li вниз под меню */
+        top:8vh;
+        background-color: #5d4954;
+        display:flex;
+        flex-direction: column;
+        /* начинка встанет в середину */
+        align-items: center;
+        width:50%;
+        transform: translateX(100%);
+        /* чтобы не пац-бум менялся background color */
+        transition: transform 0.5s ease-in;
+     }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+
+    }
+}
+.nav-active {
+        transform: translateX(0%);
+    }
+
+@keyframes navLinkFade {
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+        }
+}
+
+.toggle .line1{
+            transform: rotate(-45deg) translate(-5px,6px);
+        }
+.toggle .line2{
+        opacity: 0;
+    }
+.toggle .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* ***********************
+    General grid-structure
+*************************   */
+/* all elems are inside one grid container */
+.grid-wrapper {
+  display: grid;
+  /* grid-template-columns: repeat(12, 100px); */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 30px;
+  /* height: 100vh; */
+}
+
+.hero, .features,.callout,#blog,#footer {
+    grid-column: 1/-1;
+}
+
+/* ********************************
+    hero section
+******************************** */
+.hero {
+    display: flex;
+    align-items:center;
+    /* background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4)), url(https://unsplash.it/2000/1500?image=197); */
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4)), url(img/rail.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:40vh;
+}
+.hero-inner {
+    max-width:80vw;
+    margin:auto;
+    padding-left:2rem;
+}
+.hero-inner h2{
+    color:#fff;
+    line-height:1.2;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-inner {
+    max-width: 50vw;
+
+  }
+  .hero-inner h2 {
+    text-align: left;
+  }
+}
+/* ************************
+    Features
+************************  */
+.features {
+  padding: 2rem;
+}
+/
+.features-group{
+    padding-bottom: 2rem;
+}
+
+.features-image img {
+  width: 100%;
+}
+
+@media (min-width:768px){
+    .features {
+      padding: 4rem;
+    }
+    .features-group:nth-child(2){
+        margin:0 2rem;
+    }
+    .features-inner{
+        display:flex;
+        max-width: 800px;
+        margin: auto;
+    }
+    .features-group{
+        padding-bottom: 0rem;
+        flex:0 1 30vw;
+    }
+}
+/* ************************
+    callout
+************************ */
+
+.callout {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://unsplash.it/1500?image=1019); */
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/bosLight.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.callout-inner {
+  text-align: center;
+}
+.callout-inner h3 {
+  font-size: 2rem;
+}
+
+/* *******************
+    blog
+******************* */
+
+#blog{
+    padding:2rem 0;
+}
+@media (min-width:768px){
+    #blog{
+        padding:5rem 0;
+    }
+}
+.blog-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+}
+@media (min-width:768px){
+    .blog-grid{
+        display:grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 30px;
+        grid-gap: 3rem;
+    }
+}
+.blog-inner{
+    max-width: 800px;
+    margin:auto;
+    padding:0 1rem;
+}
+.blog-image img{
+    width: 100%;
+}
+.blog-text{
+    margin-bottom: 1.5rem;
+}
+.blog-summary{
+    margin-top: 0;
+}
+
+.blog-cta {
+  margin: 2rem 0 0;
+}
+.blog-cta a {
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .blog-cta {
+    margin: 3rem 0 0;
+    text-align: center;
+  }
+  .blog-cta a {
+    font-size: 1rem;
+  }
+}
+/* **********************
+    footer
+***********************     */
+#footer {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 3rem;
+    justify-content:space-between;
+    max-width: 1000px;
+    margin: auto;
+  }
+.footer-group {
+    padding: 1.5rem 1rem;
+
+  }
+@media (min-width: 1000px) {
+    .footer-group {
+        width: 400px;
+    }
+}
+.footer-heading h4 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links ul li {
+  padding: 0.5rem 0;
+}
+.footer-links ul li a {
+  color: white;
+  transition: color 200ms ease;
+}
+.footer-links ul li a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
