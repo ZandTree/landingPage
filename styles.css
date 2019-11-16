@@ -4,6 +4,7 @@
     box-sizing: border-box;
 
 }
+
 /* *************************
     buttons
 ************************* */
@@ -246,7 +247,7 @@ nav {
 .features {
   padding: 2rem;
 }
-/
+
 .features-group{
     padding-bottom: 2rem;
 }
@@ -356,54 +357,63 @@ nav {
 }
 /* **********************
     footer
-***********************     */
-#footer {
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+*************************  */
+
+#footer{
+    background: #5d4954;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.footer-inner{
+.footer-inner {
+    width:1000px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-@media (min-width:1000px){
-    .footer-group {
-        width: 400px;
-    }
+.contact-info{
+    margin:0 5px;
+    flex: 0 1 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-column-gap: 3rem;
-    justify-content:space-between;
-    /* max-width: 1000px;
-    margin: auto; */
-  }
-.footer-group {
-    padding: 1.5rem 1rem;
-
-  }
-
-.footer-heading h4 {
-  font-weight: 400;
-  font-size: 1.2rem;
+.card{
+    width: calc(33%);
+    background-color: #5d4954;
+    height:200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
 }
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
+.card-icon{
+    font-size: 1.5rem;
+    background: gray;
+    height:60px;
+    width:60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition:0.3s linear;
 }
-.footer-links ul li {
-  padding: 0.5rem 0;
+.card:hover .card-icon{
+    background: none;
+    color:#EE5A24;
+    transform: scale(1.6);
 }
-.footer-links ul li a {
-  color: white;
-  transition: color 200ms ease;
+.card p{
+    margin-top: 20px;
+    font-weight:300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
 }
-.footer-links ul li a:hover {
-  color: rgba(255, 255, 255, 0.8);
+.card:hover p {
+    max-height: 40px;
+    opacity: 1;
 }
