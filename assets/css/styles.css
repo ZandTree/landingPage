@@ -4,6 +4,11 @@
     box-sizing: border-box;
 
 }
+body {
+    min-height: 100vh;
+    background:#f5e1cb;
+    /* #f9f3ec; */
+}
 
 /* *************************
     buttons
@@ -67,6 +72,7 @@
     justify-content: center;
     align-items: center;
 }
+/* input .search-txt */
 .search-txt {
     border: none;
     background: none;
@@ -79,6 +85,7 @@
     line-height: 40px;
     width:0px;
 }
+
 /* *****************************
     navigation
 ***************************** */
@@ -110,7 +117,7 @@ nav {
     color:rgb(226,226,226);
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
 
 }
 .burger{
@@ -214,7 +221,7 @@ nav {
     display: flex;
     align-items:center;
     /* background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4)), url(https://unsplash.it/2000/1500?image=197); */
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4)), url(img/rail.jpg);
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4)), url(../img/rail.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -256,6 +263,9 @@ nav {
   width: 100%;
   border-radius: 20%;
 }
+.icon-date {
+    padding: 5px 0;
+}
 
 @media (min-width:768px){
     .features {
@@ -280,7 +290,7 @@ nav {
 
 .callout {
   /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://unsplash.it/1500?image=1019); */
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/bosLight.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/bosLight.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -332,6 +342,7 @@ nav {
 }
 .blog-image img{
     width: 100%;
+
 }
 .blog-text{
     margin-bottom: 1.5rem;

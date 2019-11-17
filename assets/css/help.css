@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background:#f5e1cb;
+}
+.grid-wrapper {
+
+    height:100vh;
+}
+
+/* *****************************
+categ + tags widget
+******************************* */
+.categories {
+    /* background: #f9f3ec; */
+    padding:1rem;
+}
+.cats {
+    width:100%;
+    padding:1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    /* width: 50%; ??? */
+}
+.cats li{
+    list-style: none;
+    line-height: 1.5;
+
+}
+
+.cats a{
+    text-decoration: none;
+    color:#5d4954;
+    /* color:rgb(226,226,226); */
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* *********** tags ********** */
+.tags {
+    /* background: #eaeae8; */
+    padding: 0 0 .8rem 1.5rem;
+}
+.tags-items {
+    margin-top:1rem;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.tag-wrap {
+    /* background: green; */
+    padding:5px 12px;
+    border: 1px solid gray;
+    border-radius: 10%;
+    margin:.3rem;
+    display: inline-block;
+}
+.tag-wrap > a{
+    text-decoration: none;
+    color:#000;
+}
+.tag-wrap:hover{
+    color:red;
+    background: #dedddd;
+    transition: background-color 200ms ease;
+}
+
+/* ************************
+    main content
+***************************     */
+.container-inner {
+    grid-column: 1/-1;
+    max-width: 100%;
+    width:100vw;
+    margin: auto;
+    /* background:#f9f3ec; */
+}
+.artCard img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+.arch{
+    background:#f9f3ec;
+    text-align: center;
+    grid-area: arch;
+}
+main {
+    /* background: #f1c1bb; */
+    text-align: center;
+    padding:1.5rem;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    max-width: 100%;
+
+}
+#blogGrid {
+    text-align: center;
+    padding:1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    max-width: 700px;
+    margin:auto;
+}
+
+.aside {
+    background:#f9f3ec;
+    /* #718093; */
+    /* #f5f6fa; */
+    text-align: center;
+    grid-area: catsAndtags;
+}
+
+@media (min-width:700px){
+    #blogGrid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .container-inner{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "catsAndtags main arch";
+    }
+    .tag-wrap {
+        padding:7px;
+    }
+    .artCard {
+        display: flex;
+        flex-direction: column;
+    }
+    .lowBut {
+        margin-top: auto;
+    }
+    .artText {
+        padding-bottom: 1rem;
+    }
+}
+
+.pagin {
+    background: purple;
+}
