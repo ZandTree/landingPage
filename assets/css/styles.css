@@ -105,6 +105,9 @@ body {
 .round {
     border-radius: 6px;
 }
+.marginTop{
+    margin-top: 5rem;
+}
 
 
 /* *****************************
@@ -315,6 +318,11 @@ footer {
         margin:0 10px;
     }
 }
+@media (min-width:700px){
+    footer {
+        margin-top: 2rem;
+    }
+}
 
 /* **************index.html styling *********** */
 
@@ -495,7 +503,8 @@ footer {
 .pag-wrapper li a{
     background: black;
     text-decoration: none;
-    color:#ee9595;
+    color:rgba(255,255,255,0.5);
+    /* #ee9595; */
     /* #333; */
     border-radius: 50%;
     margin: 4px;
@@ -528,15 +537,21 @@ footer {
     }
 }
 
+
 /* ******************************
     all Blogs
 *****************************  */
+
+.aside,.arch {
+    padding-top: 0.5rem;
+}
 /* *****************************
 categ + tags widget
 ******************************* */
 .categories {
     /* background: #f9f3ec; */
-    padding:1rem;
+    /* padding:1rem; */
+    padding: 0 0 .8rem 1.5rem;
 }
 .cats {
     width:100%;
@@ -589,6 +604,10 @@ categ + tags widget
     color:red;
     background: #dedddd;
 }
+.categories h3, .tags h3{
+    text-align: left;
+    /* padding-left: 1rem; */
+}
 
 /* ************************
     main content allblogs.html
@@ -597,22 +616,25 @@ categ + tags widget
     grid-column: 1/-1;
     max-width: 100%;
     width:100vw;
-    margin: auto;
+    margin: -1rem auto;
     /* background:#f9f3ec; */
+
 }
 .artCard img{
     max-width: 100%;
     border-radius: 5px;
 }
 .arch{
-    background:#f9f3ec;
+    /* background:#f9f3ec; */
     text-align: center;
     grid-area: arch;
+    border-left:1px solid rgba(128,128,128,0.4);
+
 }
 .main-allblogs {
     /* background: #f1c1bb; */
     text-align: center;
-    padding:1.5rem;
+    /* padding:1.5rem; */
     grid-area: main;
     display: grid;
     grid-template-columns: 1fr;
@@ -631,9 +653,8 @@ categ + tags widget
 }
 
 .aside {
-    background:#f9f3ec;
-    /* #718093; */
-    /* #f5f6fa; */
+    /* background:#f9f3ec; */
+    border-right:1px solid rgba(128,128,128,0.4);
     text-align: center;
     grid-area: catsAndtags;
 }

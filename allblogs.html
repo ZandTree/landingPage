@@ -10,6 +10,7 @@
         <!-- <link rel="stylesheet" href="assets/css/help.css"> -->
     </head>
     <body>
+        <div class="grid-wrapper">
         <nav>
             <div class="logo">
                 <h4>Ekster@Co</h4>
@@ -21,18 +22,30 @@
                 <li><a href="">Sign Up</a></li>
                 <li><a href="">Log In</a></li>
             </ul>
-            <div class="search-box">
-                <input type="txt" name="" value=""
-                class="search-txt" placeholder="search">
-                <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
-            </div>
+            
             <div class="burger toggle">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
         </nav>
-        <div class="grid-wrapper">
+        <!-- <div class="grid-wrapper"> -->
+            <section class="search marginTop">
+                <div class="search-inner">
+                    <!-- <form class="contact-box" action="#" method="get"> -->
+                    <form class="search-form" action="#" method="get">
+                        <div class="search-box">
+                            <input type="txt" name="q" value=""
+                                class="search-txt" placeholder="search">
+                                <a href="" class="search-btn">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                        </div>
+                        <button class="button round" type="submit">Search</button>
+
+                    </form>
+               </div>
+           </section>
             <section class="container-inner">
                 <aside class="aside">
                     <div class="categories">
