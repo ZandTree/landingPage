@@ -6,6 +6,7 @@
 }
 body {
     min-height: 100vh;
+    max-width: 100vw;
     background:#f5e1cb;
     /* #f9f3ec; */
 }
@@ -43,11 +44,18 @@ body {
 /* ************************
     search button
 ************************ */
-.mobile-search{
-    padding-bottom:20px;
+.search{
+    margin: .5rem 1rem 0;
 }
-.
-.search-box, .search-box-desk {
+.search-inner{
+    display:flex;
+    max-width: 800px;
+    margin: auto;
+    justify-content: flex-end;
+    padding:1rem 0;
+}
+
+.search-box {
     /*position:absolute;
     top:50%;
     left:50%;
@@ -55,45 +63,16 @@ body {
     transform: translate(-50%,-50%); */
     height: 40px;
     border-radius: 40px;
-    padding: 15px;
+    display: flex;
+    /* margin-right: 1rem; */
+    padding-right: 15px;
 }
-
 .search-box:hover >.search-txt{
-    width:250px;
-    padding: 0 6px;
-}
-.search-box-desk:hover >.search-txt{
     width:250px;
     padding: 0 6px;
 }
 .search-box:hover >.search-btn{
     background: white;
-}
-.search-box-desk:hover >.search-btn{
-    background: white;
-}
-@media (max-width:600px){
-    .mobile-search{
-        background: #5d4954;
-    }
-    .search-box{
-        margin-left:10px;
-        /* padding:10px 0; */
-        display:flex;
-    }
-    .search-box-desk{
-        display: none;
-    }
-}
-@media (min-width:600px){
-    .mobile-search{
-        display:none;
-    }
-    .search-box-desk{
-        display: flex;
-        margin-right: 1rem;
-        padding-right:0 10px 0;
-    }
 }
 .search-btn {
     color:black;
@@ -114,12 +93,19 @@ body {
     outline: none;
     float:left;
     padding: 0;
-    color:white;
+    color:#000;
     font-size: 16px;
     transition:0.4s;
     line-height: 40px;
     width:0px;
 }
+.search-form{
+    display: flex;
+}
+.round {
+    border-radius: 6px;
+}
+
 
 /* *****************************
     navigation
@@ -131,12 +117,19 @@ nav {
     min-height: 8vh;
     font-family: 'Poppins', sans-serif;
     background-color: #5d4954;
+    position: fixed;
+    top:0;
+    /* right:0; */
+    width:100%;
+    flex-wrap: wrap;
+
 }
 .logo {
     color:rgb(226,226,226);
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
+    padding-left: 0.5rem;
 }
 .nav-links {
     display: flex;
@@ -245,7 +238,7 @@ nav {
   /* height: 100vh; */
 }
 
-.hero, .features,.callout,#blog,footer,.mobile-search {
+nav,.hero, .features,.callout,#blog,footer,.contact-section,.search {
     grid-column: 1/-1;
 }
 /* **********general footer************ */
@@ -293,8 +286,8 @@ footer {
 
 .card:hover .card-icon{
     background: none;
-    color:#ee9595;
-    /* #fff; */
+    color:rgba(255,255,255,0.8);
+    /* #ee9595; */
     transform: scale(1.6);
 }
 
@@ -312,7 +305,7 @@ footer {
     color:#fff;
 }
 @media (max-width:700px){
-    #footer{
+    footer{
         flex-direction: column;
     }
     .card {
@@ -364,6 +357,7 @@ footer {
 ************************  */
 .features {
   padding: 2rem;
+  /* margin:0  */
 }
 
 .features-group{
@@ -669,3 +663,66 @@ categ + tags widget
     }
 }
 /* ********** end allblogs.html styling ********** */
+
+/* ************* conact.html ********************* */
+.contact-section{
+    text-align: center;
+    padding: 3rem 0;
+}
+.inner-width {
+    max-width: 80%;
+    margin: auto;
+    /* background: gray; */
+    background: #5d4954;
+    font-family: 'Poppins',sans-serif;
+    padding:  1rem;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+/* tag form ==.contact-box */
+.contact-box{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-section h1{
+    font-size:1.1;
+    color:rgba(255,255,255,0.8);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+/* tag div */
+.form-group {
+    margin-bottom: 1rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+label {
+    color:rgba(255,255,255,0.8)
+}
+.input-control{
+    margin-top: .5rem;
+    padding:.5rem;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    /* border: 1px solid transparent; */
+    border: 1px solid rgba(255,255,255,0.2);
+    background: none;
+    color:white;
+}
+@media screen and (min-width:800px){
+    .inner-width{
+        width:70%;
+
+    }
+}
