@@ -24,33 +24,35 @@ const navSlide =()=>{
     }) //end addEventListener
 
 } // end function navLinks
-
-
 navSlide();
 
+// modal functionality
+// signup
+var modalBtn = document.querySelector(".modal-btn-signup");
 
-//
-// var nav_link = $('.nav-links');
-//
-// var burger = $('.burger');
-// var toggle = false
-// burger.on('click',function(){
-//     if (toggle) {
-//         nav_link.css('transform','translateX(0%)');
-//     }
-//     else{
-//         nav_link.css('transform','translateX(100%)');
-//     }
-//     toggle = !toggle
-// })
-// but better general function (small funct inside)
-// const app=()=>{
-//     navSlide();
-// }
-// app();
-//navLinks.forEach((link,index)=>{
-    // to set a delay in rendering links of menu (index/7)
-    //link.style.animation=`navLinkFade 0.5s ease forwards ${index/7 +1.5}s`;
-    // would like to set initial delay
-    // link.style.animation=`navLinkFade 0.5s ease forwards ${index/7 + 0.3}s`;
-//})
+var modalBg = document.querySelector(".modal-bg-signup");
+
+modalBtn.addEventListener('click',()=>{
+    console.log("singup clicked");
+    modalBg.classList.add('modal-bg-active');
+})
+//close modal
+var modalClose = document.querySelector(".modal-close");
+modalClose.addEventListener('click',()=>{
+    modalBg.classList.remove('modal-bg-active');
+})
+//login
+var modalButLogIn = document.querySelector(".modal-btn-login");
+
+var modalLogIn = document.querySelector(".modal-bg-login");
+
+modalButLogIn.addEventListener('click',()=>{
+        console.log("login clicked");
+    modalLogIn.classList.add('modal-bg-active');
+})
+//close modal
+var modalClose2 = document.querySelector(".modal-close2");
+modalClose2.addEventListener('click',()=>{
+    console.log("X clicked");
+    modalLogIn.classList.remove('modal-bg-active');
+})
