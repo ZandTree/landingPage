@@ -33,7 +33,6 @@ var modalBtn = document.querySelector(".modal-btn-signup");
 var modalBg = document.querySelector(".modal-bg-signup");
 
 modalBtn.addEventListener('click',()=>{
-    console.log("singup clicked");
     modalBg.classList.add('modal-bg-active');
 })
 //close modal
@@ -47,12 +46,25 @@ var modalButLogIn = document.querySelector(".modal-btn-login");
 var modalLogIn = document.querySelector(".modal-bg-login");
 
 modalButLogIn.addEventListener('click',()=>{
-        console.log("login clicked");
-    modalLogIn.classList.add('modal-bg-active');
+        modalLogIn.classList.add('modal-bg-active');
 })
-//close modal
+//close modal-2
 var modalClose2 = document.querySelector(".modal-close2");
 modalClose2.addEventListener('click',()=>{
-    console.log("X clicked");
     modalLogIn.classList.remove('modal-bg-active');
+})
+
+var callLogin = document.getElementById('loginCall');
+console.log("Curious about login?");
+callLogin.addEventListener('click',()=>{
+    modalBg.classList.remove('modal-bg-active');
+    modalLogIn.classList.add('modal-bg-active');
+
+})
+
+var callSignUp = document.getElementById('call-signup');
+callSignUp.addEventListener('click',()=>{
+    modalLogIn.classList.remove('modal-bg-active');
+    modalBg.classList.add('modal-bg-active');
+
 })
