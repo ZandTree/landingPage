@@ -28,86 +28,89 @@
         </nav>
         <!-- <div class="grid-wrapper"> -->
             <!-- hero -->
-            <section class="hero">
-                <div class="hero-inner">
-                    <h2>Some important text </h2>
-                </div>
-            </section>
+        <section class="hero">
+            <div class="hero-inner">
+                <h2>Some important text </h2>
+            </div>
+        </section>
             <!-- Search -->
-            <section class="search">
-                <div class="search-inner">
-                    <form class="search-form" action="#" method="post">
-                        <div class="search-box">
-                            <input type="text" name="q" value=""
-                                class="search-txt" placeholder="search">
-                            <a href="#" class="search-btn">
-                                <button class="invisible" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </a>
-                        </div>
-                    </form>
-               </div>
-           </section>
+        <section class="search">
+            <div class="search-inner">
+                <form class="search-form" action="#" method="post">
+                    <div class="search-box">
+                        <input type="text" name="q" value=""
+                            class="search-txt" placeholder="search">
+                        <a href="#" class="search-btn">
+                            <button class="invisible" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </a>
+                    </div>
+                </form>
+           </div>
+       </section>
             <!-- Contact -->
-            <section class="contact-section">
-                <div class="inner-width">
-                    <h1>Get in touch with us</h1>
-                    <form class="contact-box" action="#" method="post">
-                        <input type="hidden" name="csrfmiddlewaretoken" value="...">
-                        <div class="form-group">
-                            <label for="name">
-                                Your Name
-                            </label>
-                            <input type="text" name="name" required="" placeholder="You name"
-                            id="name" class="input-control" autofocus="autofocus" title="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">
-                                Your Email
-                            </label>
-                            <input type="email" name="email" required="" placeholder="E-mail address" id="email" class="input-control" autofocus="autofocus" title="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="msg">
-                                Your Message
-                            </label>
-                            <textarea  class="input-control msg" rows="10" placeholder="Your msg"></textarea>
-                        </div>
-
-                        <button type="submit" class="button">Send</button>
-
-                    </form>
-
+        <section class="contact-section">
+            <div class="inner-width">
+                <h1>Get in touch with us</h1>
+                <form class="contact-box" action="#" method="post">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="...">
+                    <div class="form-group">
+                        <label for="name">
+                            Your Name
+                        </label>
+                        <input type="text" name="name" required="" placeholder="You name"
+                        id="name" class="input-control" autofocus="autofocus" title="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            Your Email
+                        </label>
+                        <input type="email" name="email" required="" placeholder="E-mail address" id="email" class="input-control" autofocus="autofocus" title="email">
+                        <input type="text" hidden name="post_id" value="{{post.id}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="msg">
+                            Your Message
+                        </label>
+                        <textarea  class="input-control msg" rows="10" placeholder="Your msg"></textarea>
+                    </div>
+                    <button type="submit" class="button">Send</button>
+                </form>
+                <div class="marginTop1">
+                    <i class="fas fa-arrow-circle-left"></i>
+                    <span class="space">
+                        <a href="index.html" class="no-understreep white-color">Back</a>
+                    </span>
                 </div>
-            </section>
+            </div>
+        </section>
             <!-- <form class="contact" action="#" method="post">
                 <div class="blog-cta"><a class="button ghost-button" href="#">Send</a></div>
             </form> -->
             <!-- Footer-->
-            <footer>
-                  <!-- <div class="footer-inner"> -->
-                      <div class="contact-info">
-                          <div class="card">
-                              <i class="card-icon far fa-envelope"></i>
-                              <p>Ekster@gmail.com</p>
-                          </div>
+        <footer>
+              <!-- <div class="footer-inner"> -->
+                  <div class="contact-info">
+                      <div class="card">
+                          <i class="card-icon far fa-envelope"></i>
+                          <p>Ekster@gmail.com</p>
                       </div>
-                      <div class="contact-info">
-                          <div class="card">
-                              <i class="card-icon fas fa-phone"></i>
-                              <p>+22332200000</p>
-                          </div>
+                  </div>
+                  <div class="contact-info">
+                      <div class="card">
+                          <i class="card-icon fas fa-phone"></i>
+                          <p>+22332200000</p>
                       </div>
-                      <div class="contact-info">
-                          <div class="card">
-                              <i class="card-icon fas fa-map-marker-alt"></i>
-
-                              <p>Land Street 2123</p>
-                          </div>
+                  </div>
+                  <div class="contact-info">
+                      <div class="card">
+                          <i class="card-icon fas fa-map-marker-alt"></i>
+                          <p>Land Street 2123</p>
                       </div>
-                  <!-- </div> -->
-            </footer>
+                  </div>
+              <!-- </div> -->
+        </footer>
     </div><!--div grid-wrapper-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="assets/js/script.js"></script>

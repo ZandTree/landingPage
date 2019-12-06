@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/c0d0526434.js"></script>
-        <title>profile</title>
+        <title>landing page</title>
         <link rel="stylesheet" href="assets/css/styles.css">
         <!-- <link rel="stylesheet" href="search/nav.css"> -->
         <!-- https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css -->
@@ -23,6 +23,7 @@
                 <li><button class="mask-auth modal-btn-signup">Sign Up</button></li>
                 <li><button class="mask-auth modal-btn-login">Log In</button></li>
                 <li><a href="log-out.html">Log out</a></li>
+                <li><a href="profile.html">Profile</a></li>
             </ul>
             <div class="burger toggle">
                 <div class="line1"></div>
@@ -30,13 +31,11 @@
                 <div class="line3"></div>
             </div>
         </nav>
-
         <!-- <div class="grid-wrapper"> -->
-
-        <!-- hero -->
+            <!-- hero -->
         <section class="hero">
             <div class="hero-inner">
-                <h2>Some important text </h2>
+                <h2 class="marginTop1">Some important text </h2>
             </div>
         </section>
         <section class="search">
@@ -52,46 +51,124 @@
                         </a>
                     </div>
                 </form>
-            </div>
+           </div>
         </section>
+        <!--detail-->
+        <section class="post-container">
+            <main class="post-section">
+                <div class="post-wrapper">
+                    <h1 class="post-title">Title of the post</h1>
+                    <div class="post-preview">
+                        <div class="post-preview-top">
+                            <span>
+                                <i class="far fa-user space"> Sally Smith</i>
+                            </span>
+                            <span>
+                                <i class="far calenderspace">Dec 5, 2019</i>
+                            </span>
+                        </div>
 
-           <!-- Contact -->
-        <section class="contact-section">
-            <div class="inner-profile">
-                <div class="profile-image">
-                    <img src="assets/img/bloom.jpg" alt="avatar" >
+                        <div class="post-preview-bottom">
+                            <span><i class="fas fa-comments"></i>&nbsp; 12 comments</span>&nbsp;|&nbsp;
+                            <span><i class="fas fa-eye"></i>&nbsp; 12 comments</i></span>
+                            <!-- &nbsp; -->
+                        </div>
+                    </div>
+                    <img src="assets/img/comp.jpg" alt="post-image" class="post-image">
+                    <div class="post-body">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad laboriosam sunt, ullam voluptatibus omnis reprehenderit fuga illum, quisquam magni saepe quis dignissimos exercitationem itaque cupiditate quam porro molestias velit maxime.
+                            Dicta veritatis est amet qui labore temporibus blanditiis corrupti ab libero possimus vel impedit nulla soluta quis alias, iusto, exercitationem consectetur! Obcaecati, ipsa, repellendus saepe esse doloribus voluptatem eos enim?
+                            Possimus molestiae nostrum quae obcaecati omnis a culpa quisquam sapiente accusantium, hic natus explicabo blanditiis, nam illum ut vitae provident fugit distinctio. Quod suscipit possimus molestias perferendis odit nam, id?
+                        </div>
+
+                        <div class="post-tags marginTop1">
+                            <div class="tag-collection">
+                                <span class="space">tag1</span>,<span class="space">tag1</span>,<span class="space">tag1</span>,<span class="space">tag1</span>
+                            </div>
+                            <div class="tag-share">
+                                <p>Share this post</p>
+                            </div>
+                        </div>
+
+                </div> <!--post-wrapper-->
+                <div class="back-wrapper">
+                    <div class="back marginTop1">
+                            <i class="fas fa-arrow-circle-left"></i>
+                            <span class="space optionTextForm ">
+                                <a href="allblogs.html" class="no-understreep ">Back</a>
+                            </span>
+                    </div>
                 </div>
-                <h1> Your account</h1>
-                <p>Created at: 12/04/2019</p>
+                <!--comments-->
+                <div class=comments-row>
+                    <div class="inner-width">
+                        <h1>Leave your comment</h1>
+                        <form class="contact-box" action="#" method="post">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="...">
+                            <div class="form-group">
+                                <textarea  class="input-control msg" rows="10" placeholder="Your comment"></textarea>
+                            </div>
+                            <button type="submit" class="button">Comment</button>
+                        </form>
+                        <div class="marginTop1">
+                            <i class="fas fa-arrow-circle-left"></i>
+                            <span class="space">
+                                <a href="index.html" class="no-understreep white-color">Back</a>
+                            </span>
+                        </div>
 
-                <div class="profile-item bottom-line marginTop1"><a href="">Notifications <span class='bell'><i class="fas fa-bell"></i></span></a></div>
-                <div class="profile-item  bottom-line"><a href="change-avatar.html">Change avatar</a></div>
-                <div class="profile-item bottom-line-danger"><a href="change_password.html">Change password</a></div>
-                <div class="profile-item"><a href="delete_account.html">Delete account</a></div>
+                <!--end comments-->
+            </main>
+            <aside class="sidebar-section">
+                <div class="sidebar-wrapper">
+                    <div class="all-categories">
+                        <h3>Categories</h3>
+                        <ul class="cats">
+                            <li class="cats-li"><a href="">Programming</a></li>
+                            <li class="cats-li"><a href="">Nature</a></li>
+                            <li class="cats-li"><a href="">Fun</a></li>
+                            <li class="cats-li"><a href="">Meds</a></li>
+                            <li class="cats-li"><a href="">Noty Adice</a></li>
 
-            </div><!--inner-profile-->
+                        </ul>
+                    </div>
+                    <div class="all-tags">
+                        <h3>Tags</h3>
+                        <div class="tags-items">
+                            <span class="tag-wrap"><a href="">tag1 ff </a></span>
+                            <span class="tag-wrap"><a href="">tag1  fff </a></span>
+                            <span class="tag-wrap"><a href="">tag1fff </a></span>
+                            <span class="tag-wrap"><a href="">tag1  fff </a></span>
+                            <span class="tag-wrap"><a href="">tag1</a></span>
+                            <span class="tag-wrap"><a href="">tag1  fff ii</a></span>
+                            <span class="tag-wrap"><a href="">tag1  p</a></span>
+                            <span class="tag-wrap"><a href="">tag1  fff </a></span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </section>
         <!-- Footer-->
         <footer>
-            <div class="contact-info">
-                <div class="card">
-                    <i class="card-icon far fa-envelope"></i>
-                     <p>Ekster@gmail.com</p>
-                </div>
-            </div>
-                 <div class="contact-info">
-                    <div class="card">
+              <div class="contact-info">
+                      <div class="card">
+                          <i class="card-icon far fa-envelope"></i>
+                          <p>Ekster@gmail.com</p>
+                      </div>
+                  </div>
+                  <div class="contact-info">
+                      <div class="card">
                           <i class="card-icon fas fa-phone"></i>
                           <p>+22332200000</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="card">
-                      <i class="card-icon fas fa-map-marker-alt"></i>
-                      <p>Land Street 2123</p>
-                    </div>
-                </div>
-            </footer>
+                      </div>
+                  </div>
+                  <div class="contact-info">
+                      <div class="card">
+                          <i class="card-icon fas fa-map-marker-alt"></i>
+                          <p>Land Street 2123</p>
+                      </div>
+                  </div>
+        </footer>
     </div><!--div grid-wrapper-->
     <!-- block signup -->
     <div class="modal-bg-signup" id="signup">
@@ -99,6 +176,7 @@
             <h2 class="title-auth">
                 Sign Up
             </h2>
+
             <div class="form-extra">
                 <p class="optionTextForm">
                     Already have an account? Please
