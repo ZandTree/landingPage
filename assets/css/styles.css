@@ -1117,7 +1117,6 @@ label {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
     }
     /* no need link "back on large screens " */
     .back-wrapper{
@@ -1220,7 +1219,7 @@ label {
 }
 
 .nested-comments-wrapper {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 10px;
   /* Necessary until MS supports the latest version of the spec */
   -ms-grid-row: 2;
@@ -1246,15 +1245,16 @@ label {
     background: transparent;
     border:3px solid #fff;
 }
+.comment-body{
+    border-bottom: 1px solid red;
+    margin:1rem 0;
+    padding:1rem;
+}
 @media (max-width:700px){
     .comment {
       display: block;
-
     }
     .nested-comments-wrapper {
-       padding: 20px;
-
+       padding: 5px 0 5px 0px;
     }
-
-
 }
