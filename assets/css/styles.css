@@ -4,9 +4,9 @@
     box-sizing: border-box;
 
 }
-html {
+/* html {
     margin-bottom: -500px;
-}
+} */
 body {
     min-height: 100vh;
     max-width: 100vw;
@@ -335,75 +335,103 @@ nav {
  /* height: 100vh; */
 }
 
-nav,.hero, .features,.callout,#blog,footer,.contact-section,.search,.post-section,.post-container,#signup,#login {
+nav,.hero,.search,.features,.callout,#blog,footer,.contact-section,.post-container,#signup,#login {
     grid-column: 1/-1;
 }
 /* **********general footer************ */
 /* **********************
     footer
 *************************  */
-footer {
-    background: #5d4954;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* height:300px; */
-    height: 100%;
-    margin-top: auto;
-}
-.contact-info {
-    display:flex;
+/* ************ footer ****************** */
+/* Goal: click on #bookshelf(or #)|=> panel appears with 100vh and X to close */
+#footer-nav {
+    background-color:#5d4954;
+    /* rgb(29,25,22); */
+    color: rgb(226,226,226);
+    /* rgb(255,234,180); */
+    padding: 1rem;
+    /* in case browser doesn't support sticky property fall back */
+    position:fixed;
+    bottom: 0;
     width:100%;
-    max-width: 1200px;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.card {
-    width:calc(40%);
-    height: 140px;
-    padding:0 20px;
-    margin:0 10px;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
+    /*otherwise */
+    position: sticky;
+    bottom: 0px;
+    /* just to be sure that we have this elem behind the panel */
+    z-index: 100;
 
 }
-.card-icon{
-    font-size: 28px;
-    background: gray;
-    height:60px;
-    width:60px;
-    text-align: center;
-    line-height: 60px !important;
-    border-radius: 50%;
-    transition:0.3s linear;
-    color:black;
+
+.footer-nav-menu{
+    max-width: 90%;
+    margin:auto;
+    list-style: none;
+}
+.panel-close{
+   text-align: right;
+}
+.panel-close i{
+   font-size: 2rem;
 }
 
-.card:hover .card-icon{
-    background: none;
-    color:rgba(255,255,255,0.8);
-    /* #ee9595; */
-    transform: scale(1.6);
+.footer-nav-menu {
+    display:flex;
+    justify-content: space-between;
+}
+.footer-nav-menu-item i{
+   font-size: 1.5rem;
+}
+/* default div.panel |=> hidden under the footer thx to transform: translateY(100%); if click |==> transform: translateY(0%) and it appears above the footer with fixed state;*/
+.panel {
+   /* padding:1rem; */
+   height:100vh;
+   /* or 100% */
+   width:100%;
+   /* to raise this elem above the rest */
+   /* with fixed |=> pulled out the flow */
+   position: fixed;
+   top:0;
+   left:0;
+   /* let op: bg color on front, the rest is behind panel */
+   background-color: #e7e3e3;
+   /* important moment: we need only with css tool to shift
+   cilck elem |==> from fixed position to jump under the footer
+   ax Y|=> push it 100% in Y-direction*/
+   transform: translateY(100%);
+   /* to prevent just jump|==> smooth changing (0% vs 100%) */
+   transition: -webkit-transform 500ms ease;
+   transition: transform 500ms ease;
+}
+.panel.active {
+   -webkit-transform: translateY(0);
+   transform: translateY(0);
+   /* aply to active class .panel.active  */
+   animation: slideUp 0.8s ease;
 }
 
-.card p{
-    margin-top: 20px;
-    font-weight:300;
-    letter-spacing: 2px;
-    max-height: 0;
-    opacity: 0;
-    transition: 0.3s linear;
+@keyframes slideUp {
+   from{
+       transform: translateY(100%);
+       opacity: 0;
+   }
+   to{
+       transform: translateY(0%);
+       opacity: 1;
+   }
 }
-.card:hover p {
-    max-height: 40px;
-    opacity: 1;
-    color:#fff;
+.pane-inner{
+   /* otherwise we will loose X from the right side */
+   padding:1rem;
 }
-@media (max-width:700px){
+.panel ul{
+   list-style: none;
+   padding:0;
+}
+.panel ul li{
+   margin:1rem 0;
+}
+
+/* @media (max-width:700px){
     footer{
         flex-direction: column;
     }
@@ -420,7 +448,7 @@ footer {
     footer {
         margin-top: 2rem;
     }
-}
+} */
 
 
 
@@ -733,6 +761,8 @@ categ + tags widget
     text-align: center;
     grid-area: arch;
     border-left:1px solid rgba(128,128,128,0.4);
+    visibility: hidden;
+
 
 }
 .main-allblogs {
@@ -786,6 +816,11 @@ categ + tags widget
     .artText {
         padding-bottom: 1rem;
     }
+    /* may be later o adjust */
+    .arch{
+        visibility: visible;
+    }
+
 }
 /* ********** end allblogs.html styling ********** */
 
@@ -824,6 +859,7 @@ categ + tags widget
     font-weight: 400;
 }
 /* tag div */
+/* ************ auth(login,signup) ???********************** */
 .form-group {
     margin-bottom: 1rem;
     width: 90%;
@@ -1195,6 +1231,7 @@ label {
 
 .avatar-wrapper {
   border: 1px solid black;
+  border-right: transparent;
   padding: 5px;
   /* Necessary until MS supports the latest version of the grid spec */
   -ms-grid-row: 1;
@@ -1246,7 +1283,7 @@ label {
     border:3px solid #fff;
 }
 .comment-body{
-    border-bottom: 1px solid red;
+    /* border-bottom: 1px solid rgba(0,0,0,0.1); */
     margin:1rem 0;
     padding:1rem;
 }
@@ -1256,5 +1293,12 @@ label {
     }
     .nested-comments-wrapper {
        padding: 5px 0 5px 0px;
+    }
+    .post-preview-top{
+        display: block;
+        padding-left:1rem;
+    }
+    .avatar-wrapper{
+        border-bottom: transparent;
     }
 }

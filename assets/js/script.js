@@ -26,7 +26,27 @@ const navSlide =()=>{
 } // end function navLinks
 navSlide();
 
+// *********** footer animation ******************************
+console.log("are you there baby?")
+var footElem = document.querySelector(".footer-nav-menu-item");
+console.log("found fooritem");
+$(".footer-nav-menu-item").on('click',function(){
+    console.log("clicked!!!!!");
+    var label = $(this).attr('data-label');
+    // let op: need to remove class .active from all prev opened panels
+    $(".panel").removeClass("active");
+    $(`#${label}`).addClass("active"); // give transform="translateY(0%)
+
+
+})
+$(".panel-close").on('click',function(){
+    $(".panel").removeClass("active"); // give transform="translateY(1000%)
+
+})
+
+
 // modal functionality
+
 // signup
 var modalBtn = document.querySelector(".modal-btn-signup");
 
