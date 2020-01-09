@@ -14,6 +14,9 @@ body {
     /* #f9f3ec; */
     font-family: 'Poppins', sans-serif;
 }
+.fulling{
+    height:100px;
+}
 /* *************************
     buttons
 ************************* */
@@ -620,6 +623,7 @@ nav,.hero,.search,.features,.callout,#blog,footer,.contact-section,.post-contain
     font-family: "Open Sans",sans-serif;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 3rem;
 
 }
 .pag-wrapper {
@@ -833,7 +837,8 @@ categ + tags widget
     max-width: 80%;
     margin: auto;
     /* background: gray; */
-    background: #5d4954;
+    background: #5f5d5e;
+    /* #5d4954; this make no diff with nav and footer*/
     font-family: 'Poppins',sans-serif;
     padding:  1rem;
     color:white;
