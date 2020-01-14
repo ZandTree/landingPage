@@ -275,6 +275,10 @@ nav {
     /* body {
         overflow: hidden;
     } */
+    .logo{
+        /* same as burger */
+        margin-top: 0.6rem;
+    }
     .nav-links{
         /* переместятся враво */
         position: absolute;
