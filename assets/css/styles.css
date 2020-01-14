@@ -15,7 +15,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 .fulling{
-    height:350px;
+    height:50px;
 }
 /* *************************
     buttons
@@ -214,7 +214,7 @@ body {
 nav {
     display: flex;
     justify-content:space-around;
-    align-items: center;
+    /* align-items: center; */
     min-height: 8vh;
     font-family: 'Poppins', sans-serif;
     background-color: #5d4954;
@@ -286,6 +286,8 @@ nav {
         background-color: #5d4954;
         display:flex;
         flex-direction: column;
+        /* attempt to pull menu items up on small screen (because of lowest Profile behind the footer) */
+        justify-content: flex-start;
         /* начинка встанет в середину */
         align-items: center;
         width:50%;
@@ -295,8 +297,10 @@ nav {
      }
     .nav-links li{
         opacity: 0;
+        margin: 1rem 0;
     }
     .burger {
+        margin-top:.6rem;
         display: block;
 
     }
@@ -349,7 +353,8 @@ nav,.hero,.search,.features,.callout,#blog,footer,.contact-section,.post-contain
 /* ************ footer ****************** */
 /* Goal: click on #bookshelf(or #)|=> panel appears with 100vh and X to close */
 #footer-nav {
-    background-color:#5d4954;
+
+    background-color: #5d4954;
     /* rgb(29,25,22); */
     color: rgb(226,226,226);
     /* rgb(255,234,180); */
