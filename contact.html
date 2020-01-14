@@ -2,56 +2,58 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>contact</title>
+        <title>all blogs</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/c0d0526434.js"></script>
         <link rel="stylesheet" href="assets/css/styles.css">
+        <!-- <link rel="stylesheet" href="assets/css/help.css"> -->
     </head>
     <body>
         <div class="grid-wrapper">
-        <nav>
-            <div class="logo">
-                <h4>Ekster@Co</h4>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="allblogs.html">All Blogs</a></li>
-                <li><a href="">Contact</a></li>
-                <li><button class="mask-auth modal-btn-signup">Sign Up</button></li>
-                <li><button class="mask-auth modal-btn-login">Log In</button></li>
-                <li><a href="log-out.html">Log out</a></li>
-                <li><a href="profile.html">Profile</a></li>
+            <nav>
+                <div class="logo">
+                    <h4>Ekster@Co</h4>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="allblogs.html">All Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><button class="mask-auth modal-btn-signup">Sign Up</button></li>
+                    <li><button class="mask-auth modal-btn-login">Log In</button></li>
+                    <li><a href="log-out.html">Log out</a></li>
+                    <li><a href="profile.html">Profile</a></li>
 
-            </ul>
-            <div class="burger toggle">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-        <!-- <div class="grid-wrapper"> -->
-            <!-- hero -->
-        <section class="hero">
-            <div class="hero-inner">
-                <h2>Some important text </h2>
-            </div>
-        </section>
-            <!-- Search -->
-        <section class="search">
-            <div class="search-inner">
-                <form class="search-form" action="#" method="post">
-                    <div class="search-box">
-                        <input type="text" name="q" value=""
-                            class="search-txt" placeholder="search">
-                        <a href="#" class="search-btn">
-                            <button class="invisible" type="submit">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </a>
-                    </div>
-                </form>
-           </div>
-       </section>
+                </ul>
+
+                <div class="burger toggle">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+            <section class="hero">
+                <div class="hero-inner">
+                    <h2>Some important text </h2>
+                </div>
+            </section>
+            <!-- <div class="grid-wrapper"> -->
+            <section class="search  marginTop marginBot">
+                    <div class="search-inner">
+                        <form class="search-form" action="#" method="get">
+                            <div class="search-box">
+                                <input type="text" name="q" value=""
+                                    class="search-txt" placeholder="search">
+                                <a href="#" class="search-btn">
+                                    <button class="invisible" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </a>
+                            </div>
+
+                        </form>
+                   </div>
+            </section>
             <!-- Contact -->
         <section class="contact-section">
             <div class="inner-width">
@@ -88,12 +90,10 @@
                 </div>
             </div>
         </section>
-            <!-- <form class="contact" action="#" method="post">
-                <div class="blog-cta"><a class="button ghost-button" href="#">Send</a></div>
-            </form> -->
-            <!-- Footer-->
-            <!-- Footer-->
-            <footer id="footer-nav">
+
+
+        <!-- Footer-->
+        <footer id="footer-nav">
                 <div class="footer-nav-inner">
                     <ul class="footer-nav-menu">
                         <li class="footer-nav-menu-item" data-label="help"><i class="fas fa-info-circle"></i></li>
@@ -147,95 +147,93 @@
                     </ul>
                 </div>
             </div>
-
-    </div><!--div grid-wrapper-->
-    <!-- *********** auth **************-->
-            <!-- block signup -->
-            <div class="modal-bg-signup" id="signup">
-                <div class="modal-signup" >
-                    <h2 class="title-auth">
-                        Sign Up
-                    </h2>
-                    <div class="form-extra">
-                        <p class="optionTextForm">
-                            Already have an account? Please
-                            <a href="#" id="loginCall">
-                                <span class="space">Log in</span>
-                            </a>
-                        </p>
+        </div>
+        <!-- *********** auth **************-->
+                <!-- block signup -->
+    <div class="modal-bg-signup" id="signup">
+                    <div class="modal-signup" >
+                        <h2 class="title-auth">
+                            Sign Up
+                        </h2>
+                        <div class="form-extra">
+                            <p class="optionTextForm">
+                                Already have an account? Please
+                                <a href="#" id="loginCall">
+                                    <span class="space">Log in</span>
+                                </a>
+                            </p>
+                        </div>
+                        <form class="form-auth" action="#" method="post">-->
+                            <!-- email         -->
+                            <div class="form-group">
+                                <label for="email">
+                                    Your Email
+                                </label>
+                                <input type="email" name="email" required="" placeholder="You email"
+                                id="id_email" class="input-control-auth" autofocus="autofocus" title="email"
+                                >
+                            </div>
+                            <!-- psw1           -->
+                            <div class="form-group">
+                                <label for="password1">Your password</label>
+                                <input type="password" name="password1" required="" placeholder="You password"
+                                id="id_password1" class="input-control-auth"  maxlength="150" aria-autocomplete="list" title="password1">
+                            </div>
+                            <!-- psw2 -->
+                            <div class="form-group">
+                                <label for="password2">Confirm your password</label>
+                                <input type="password" name="password2" required="" placeholder="Your password"
+                                id="id_password2" class="input-control-auth"  maxlength="150" aria-autocomplete="list" title="password2">
+                            </div>
+                            <button type="submit"class="button marginBot">Sign Up</button>
+                        </form>
+                        <span class="modal-close"><i class="fas fa-times"></i></span>
                     </div>
-                    <form class="form-auth" action="#" method="post">-->
-                        <!-- email         -->
-                        <div class="form-group">
-                            <label for="email">
-                                Your Email
-                            </label>
-                            <input type="email" name="email" required="" placeholder="You email"
-                            id="id_email" class="input-control-auth" autofocus="autofocus" title="email"
-                            >
+                    <!--end div modal -->
+    </div>
+                <!--end div signup modal-bg-->
+                <!-- block login -->
+    <div class="modal-bg-login" id="login">
+                    <div class="modal-login">
+                        <h2 class="title-auth">Log In</h2>
+                        <div class="form-extra">
+                            <p class="optionTextForm">If you have not created an account yet, please
+                            <a href="#" id="call-signup"
+                               class=""
+                               data-target=""><span class="space">Sign Up</span>
+                            </a></p>
                         </div>
-                        <!-- psw1           -->
-                        <div class="form-group">
-                            <label for="password1">Your password</label>
-                            <input type="password" name="password1" required="" placeholder="You password"
-                            id="id_password1" class="input-control-auth"  maxlength="150" aria-autocomplete="list" title="password1">
-                        </div>
-                        <!-- psw2 -->
-                        <div class="form-group">
-                            <label for="password2">Confirm your password</label>
-                            <input type="password" name="password2" required="" placeholder="Your password"
-                            id="id_password2" class="input-control-auth"  maxlength="150" aria-autocomplete="list" title="password2">
-                        </div>
-                        <button type="submit"class="button marginBot">Sign Up</button>
-                    </form>
-                    <span class="modal-close"><i class="fas fa-times"></i></span>
-                </div>
+                        <form class="form-auth" action="#" method="post">-->
+                            <!-- email         -->
+                            <div class="form-group">
+                                <label for="name">
+                                    Your Email
+                                </label>
+                                <input type="email" name="email" required="" placeholder="Your email"
+                                id="id_email" class="input-control-auth" autofocus="autofocus" title="email"
+                                >
+                            </div>
+                            <!-- psw1           -->
+                            <div class="form-group">
+                                <label for="password">Your password</label>
+                                <input type="password" name="password" required="" placeholder="Your password"
+                                id="id_password" class="input-control-auth"  maxlength="150" aria-autocomplete="list" title="password1">
+                            </div>
+                            <div class="form-extra" >
+                                <label for="id_remember">Remember me</label>
+                                <input type="checkbox" name="remember" id="id_remember" class="input-control-auth">
+                            </div>
+                            <div class="form-group">
+                                <p class="optionTextForm">Forgot Password?<a href="#"><span class="space">Here</span></a></p>
+                            </div>
+                            <button type="submit" class="button marginBot">Log In</button>
+                        </form>
+                        <span class="modal-close2"><i class="fas fa-times"></i></span>
+                    </div>
                 <!--end div modal -->
-            </div>
-            <!--end div signup modal-bg-->
-            <!-- block login -->
-            <div class="modal-bg-login" id="login">
-                <div class="modal-login">
-                    <h2 class="title-auth">Log In</h2>
-                    <div class="form-extra">
-                        <p class="optionTextForm">If you have not created an account yet, please
-                        <a href="#" id="call-signup"
-                           class=""
-                           data-target=""><span class="space">Sign Up</span>
-                        </a></p>
-                    </div>
-                    <form class="form-auth" action="#" method="post">-->
-                        <!-- email         -->
-                        <div class="form-group">
-                            <label for="name">
-                                Your Email
-                            </label>
-                            <input type="email" name="email" required="" placeholder="Your email"
-                            id="id_email" class="input-control-auth" autofocus="autofocus" title="email"
-                            >
-                        </div>
-                        <!-- psw1           -->
-                        <div class="form-group">
-                            <label for="password">Your password</label>
-                            <input type="password" name="password" required="" placeholder="Your password"
-                            id="id_password" class="input-control-auth"  maxlength="150" aria-autocomplete="list" title="password1">
-                        </div>
-                        <div class="form-extra" >
-                            <label for="id_remember">Remember me</label>
-                            <input type="checkbox" name="remember" id="id_remember" class="input-control-auth">
-                        </div>
-                        <div class="form-group">
-                            <p class="optionTextForm">Forgot Password?<a href="#"><span class="space">Here</span></a></p>
-                        </div>
-                        <button type="submit" class="button marginBot">Log In</button>
-                    </form>
-                    <span class="modal-close2"><i class="fas fa-times"></i></span>
-                </div>
-            <!--end div modal -->
-            </div>
-            <!--end div login modal-bg-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="assets/js/script.js"></script>
-
+        </div>
+                <!--end div login modal-bg-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="assets/js/script.js"></script>
     </body>
 </html>

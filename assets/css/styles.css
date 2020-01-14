@@ -15,7 +15,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 .fulling{
-    height:100px;
+    height:350px;
 }
 /* *************************
     buttons
@@ -94,6 +94,7 @@ body {
     line-height: 40px;
     width:200px;
     margin-right: .3rem;
+
 }
 
 .search-txt[type=text] {
@@ -338,7 +339,7 @@ nav {
  /* height: 100vh; */
 }
 
-nav,.hero,.search,.features,.callout,#blog,footer,.contact-section,.post-container,#signup,#login {
+nav,.hero,.search,.features,.callout,#blog,footer,.contact-section,.post-container,#signup,#login,.container-inner,.fulling {
     grid-column: 1/-1;
 }
 /* **********general footer************ */
@@ -479,7 +480,8 @@ nav,.hero,.search,.features,.callout,#blog,footer,.contact-section,.post-contain
     color:#fff;
     line-height:1.2;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -489,6 +491,7 @@ nav,.hero,.search,.features,.callout,#blog,footer,.contact-section,.post-contain
   }
   .hero-inner h2 {
     text-align: left;
+    font-size: 2.5rem;
   }
 }
 /* ************************
@@ -751,7 +754,7 @@ categ + tags widget
 .container-inner{
     grid-column: 1/-1;
     max-width: 100%;
-    width:100vw;
+    /* width:100vw; */
     margin: -1rem auto;
     /* background:#f9f3ec; */
 
@@ -832,6 +835,7 @@ categ + tags widget
 .contact-section{
     text-align: center;
     padding: 3rem 0;
+    /* ??? height: auto; */
 }
 .inner-width {
     max-width: 80%;
@@ -1096,113 +1100,68 @@ label {
     }
 }
 /* **************** post-detail.html************** */
-.sidebar-section{
-    display: none;
+/* *****************************
+categ + tags widget
+******************************* */
+.categories {
+    /* background: #f9f3ec; */
+    /* padding:1rem; */
+    padding: 0 0 .8rem 1.5rem;
 }
-.post-section{
+.cats {
     width:100%;
-    /* border: 1px solid black; */
+    padding:1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    /* width: 50%; ??? */
 }
-.post-section h1{
-    font-size:1.1;
-    color:rgba(0,0,0,0.8);
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: 600;
-    text-align: center;
-}
-.post-preview{
-    padding:0.5rem 1rem;
+.cats li{
+    list-style: none;
+    line-height: 1.5;
 
 }
-.post-preview-top,.post-preview-bottom{
-    display: flex;
-    justify-content: space-between;
+.cats a{
+    text-decoration: none;
+    color:#5d4954;
+    /* color:rgb(226,226,226); */
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* *********** tags ********** */
+.tags {
+    /* background: #eaeae8; */
+    padding: 0 0 .8rem 1.5rem;
+}
+.tags-items {
+    margin-top:1rem;
+    display:flex;
+    flex-wrap: wrap;
     align-items: center;
 }
-.post-wrapper {
-    max-width: 80%;
-    margin: auto;
-    font-family: 'Poppins',sans-serif;
-    font-size: 0.8rem;
-    padding:  0.5rem;
-    color:black;
-    /* display: flex;
-    flex-direction: column; */
-    border-radius: 5px;
-    /* border: 1px solid red; */
+.tag-wrap > a{
+    text-decoration: none;
+    color:#000;
 }
-.post-wrapper a{
-    color:black;
-}
-
-.post-image{
-    width:100%;
-    padding: 5px 0;
-}
-.post-body{
-    border-top: 1px solid rgba(0,0,0,0.2);
-    padding-top: 1rem;
-}
-.tag-collection,.tag-share{
-    border-top: 1px solid black;
-    padding: 0.5rem;
-}
-.back-wrapper{
-    text-align: center;
-}
-@media (min-width:700px){
-    .post-preview{
-        padding:0.5rem 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    /* no need link "back on large screens " */
-    .back-wrapper{
-        display:none;
-    }
-}
-@media (min-width:1000px){
-    .post-preview{
-        padding:0.5rem 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .post-preview-top,.post-preview-bottom{
-        padding: 0 1rem;
-    }
+.tag-wrap {
+    padding:5px 12px;
+    border: 1px solid gray;
+    border-radius: 10%;
+    margin:.3rem;
+    display: inline-block;
 
 }
-@media (min-width:1400px){
-    .post-container{
-        display: flex;
-    }
-    .post-wrapper{
-        max-width: 70%;
-        margin:auto;
-    }
-    .sidebar-section{
-        display:flex;
-        flex-direction: column;
-        align-items: flex-start;
-        /* border:1px solid black; */
-    }
-    .sidebar-wrapper{
-        padding:10px;
-    }
-    .all-categories{
-        display: flex;
-        flex-direction:column;
-        align-items: flex-start;
 
-    }
-    .all-categories> .cats{
-        padding-left: 0;
-    }
-
+.tag-wrap:hover{
+    color:red;
+    background: #dedddd;
+}
+.categories h3, .tags h3{
+    text-align: left;
+    /* padding-left: 1rem; */
 }
 /* ************** comments part inside post-section *************** */
 .comments-total{
@@ -1222,7 +1181,7 @@ label {
     / auto 1fr;
 }
 
-/* We can apply the highlight as an element which sits across grid areas 👌 */
+/* We can apply the highlight as an element which sits across grid areas*/
 .highlight {
   background: #ccc;
   /* Necessary until MS supports the latest version of the spec */
